@@ -1,0 +1,10 @@
+version: 2
+sources:
+    - name: abc
+      database: "{{('PROJECT')}}"
+      schema: PRODUCT
+      tables:
+        - name: DEPT
+
+
+    
