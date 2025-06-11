@@ -1,10 +1,15 @@
 version: 2
 sources:
-    - name: abc
-      database: "{{('PROJECT')}}"
-      schema: PRODUCT
-      tables:
-        - name: DEPT
+  - name : sample
+    database: "{{('RAW_DBT')}}"
+    schema: RAW_SAMPLE
+    tables:
+    - name: DEPARTMENTS
+    - name: DEPT_MANAGER
+    - name: EMPLOYEES
+    - name: SALARIES
+    - name: TITLES
 
 
-    
+              
+         
