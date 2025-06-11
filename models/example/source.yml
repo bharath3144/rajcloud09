@@ -5,6 +5,17 @@ sources:
       schema: PRODUCT
       tables:
         - name: DEPT
+          
+        - name : sample
+          database: "{{('RAW_DBT')}}"
+          schema: RAW_SAMPLE
+          table:
+        - name: DEPARTMENTS
+        - name: DEPT_MANAGER
+        - name: EMPLOYEES
+        - name: SALARIES
+        - name: TITLES
 
 
-    
+              
+         
