@@ -1,15 +1,21 @@
 version: 2
 sources:
-  - name : sample
-    database: "{{('RAW_DBT')}}"
+  - name: sample
+    database: RAW_DBT
     schema: RAW_SAMPLE
     tables:
-    - name: DEPARTMENTS
-    - name: DEPT_MANAGER
-    - name: EMPLOYEES
-    - name: SALARIES
-    - name: TITLES
-
-
-              
-         
+      - name: DEPARTMENTS
+        columns:
+          - name: DEPT_NO
+            tests:
+              - unique
+              - not_null
+          - name: DEPT_NAME
+            tests:
+              - accepted_values:
+                  values: ['Finance', 'Marketing']
+      - name: DEPT_MANAGER
+      - name: EMPLOYEES
+      - name: SALARIES
+      - name: TITLES
+      - name: EMPLOYEE
