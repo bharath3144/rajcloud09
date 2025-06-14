@@ -1,0 +1,25 @@
+version: 2
+
+
+exposures:
+
+  - name: weekly_metrics
+    label: saisri by the Week
+    type: dashboard
+    maturity: high
+    description: 
+     For more exposure about project details
+
+    depends_on:
+      - ref('emp_append')
+      - ref('emp_delete_insert')
+      - ref('emp_merge')
+      - ref('salarybyrank')
+      - source('sample','EMPLOYEE')
+      - source('sample','EMPLOYEES')
+      - source('sample','DEPARTMENTS')
+  
+    owner:
+      name:  bharath
+      email: bharathpolampalli@gmail.com
+
